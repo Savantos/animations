@@ -1,0 +1,187 @@
+/*	Animations v1.0, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
+//	================================================================================== */
+
+	*, *:before, *:after {
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	body {
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		background: #FFF;
+		color: #222;
+		font-family: 'Open Sans', Arial,sans-serif;
+		font-size: 0.9em;
+		font-weight: normal;
+		line-height: 1.8em;
+		letter-spacing: 0;
+		overflow-x: hidden;
+	}
+
+	.clearfix:after {
+		display: block;
+		width: 0;
+		height: 0;
+		overflow: hidden;
+		clear: both;
+		visibility: hidden;
+		content: " ";
+	}
+
+	.container {
+		display: block;
+		width: 940px;
+		margin: 0 auto 20px auto;
+		padding: 0;
+		position: relative;
+	}
+
+	p { margin: 0 0 20px; }
+
+	a:link, a:visited, a:active {
+		color: #222;
+		font-weight: inherit;
+		text-decoration: none;
+	}
+
+	a:hover, a:focus {
+		color: #3c3c3c;
+		text-decoration: none;
+	}
+
+	h1 {
+		margin-bottom: 20px;
+		font-family: 'Titillium Web', sans-serif;
+		font-size: 2em;
+	}
+
+	hr {
+		margin: 0 0 20px;
+		border: 0;
+		border-bottom: 1px solid #DDD;
+		clear: both;
+	}
+
+	.text-center { text-align: center; }
+
+	#header {
+		padding: 50px 0 30px;
+		background-color: #3498db;
+		color: #FFF;
+		text-align: center;
+		text-shadow: 1px 1px 0 #000;
+		overflow: hidden;
+	}
+
+	#header a { color: #FFF; }
+
+	#logo {
+		display: block;
+		margin: 0 auto 20px auto;
+		-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+		-moz-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+		box-shadow: 0 0 10px rgba(0,0,0,0.5);
+		-webkit-border-radius: 100%;
+		-moz-border-radius: 100%;
+		border-radius: 100%;
+		width: 125px;
+		height: 125px;
+		overflow: hidden;
+	}
+
+	#logo img {
+		width: 100%;
+		-webkit-border-radius: 100%;
+		-moz-border-radius: 100%;
+		border-radius: 100%;
+	}
+
+	#logo-title {
+		color: #FFF;
+		font-family: 'Nixie One',cursive;
+		font-size: 3em;
+	}
+
+	.social-icon {
+		display: inline-block;
+		margin: 0 4px;
+		border: 1px solid rgba(0,0,0,0.2);
+		-webkit-border-radius: 100%;
+		-moz-border-radius: 100%;
+		border-radius: 100%;
+		width: 40px;
+		height: 40px;
+		font-size: 1.4em;
+		text-shadow: none;
+		line-height: 40px;
+		position: relative;
+	}
+
+	.social-icon a {
+		display: block;
+		width: 40px;
+		height: 40px;
+	}
+
+	.social-icon#facebook { background: #3B5998; }
+	.social-icon#twitter { background: #00ACED; }
+	.social-icon#google-plus { background: #D34836; }
+	.social-icon#pinterest { background: #CB2027; }
+	.social-icon#rss { background: #FF6600; }
+
+	.content {
+		border-bottom: 1px solid #DDDDDD;
+		padding: 40px 0;
+		overflow: hidden;
+	}
+
+	.content.odd { background: #F5F5F5; }
+	.content.even { background: #F2F2F2; }
+
+	a.button,
+	button {
+		display: inline-block;
+		width: 150px;
+		height: 40px;
+		outline: 0;
+		margin-top: 20px;
+		border: 1px solid #3498db;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+		background: #FFF;
+		color: #3498db;
+		text-transform: uppercase;
+		line-height: 40px;
+		-webkit-transition: all .2s ease-in-out;
+		-moz-transition: all .2s ease-in-out;
+		-ms-transition: all .2s ease-in-out;
+		-o-transition: all .2s ease-in-out;
+		transition: all .2s ease-in-out;
+	}
+
+	a.button:hover,
+	button:hover {
+		outline: 0;
+		border: 1px solid #3498db;
+		background: #3498db;
+		color: #FFF;
+		text-transform: uppercase;
+		line-height: 40px;
+		cursor: pointer;
+	}
+
+	@media only screen and (max-width: 959px) {
+		.container { width: 748px; }
+	}
+
+	@media only screen and (max-width: 767px){
+		.container { width: 420px; }
+	}
+
+	@media only screen and (max-width: 479px) {
+		.container { width: 300px; }
+	}
