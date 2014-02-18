@@ -1,0 +1,102 @@
+//	Backbone v1.1, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
+//	================================================================================
+
+//	Table of Contents
+//	==================================================
+//		#Variables
+
+
+//	#Variables
+//	==================================================
+
+	// Media Query Breakpoints
+		@large-desktop:		~"only screen and (min-width: 1200px)";
+		@desktop-tablet:	~"only screen and (max-width: 979px)";
+		@tablet-mobile: 	~"only screen and (max-width: 767px)";
+		@mobile:			~"only screen and (max-width: 479px)";
+
+	// Page
+		@primary-color: #0B8593;
+		@primary-color-grey: greyscale(@primary-color);
+
+		@secondary-color: #DF722A;
+		@secondary-color-grey: greyscale(@secondary-color);
+
+		@background-color: #F2F2F2;
+
+	// Scrollbars (WebKit)
+		@-webkit-scrollbar-size: 10px;
+		@-webkit-scrollbar-radius: 10px;
+		@-webkit-scrollbar-color: darken(@primary-color, 13%);
+		@-webkit-scrollbar-color-hover: lighten(@-webkit-scrollbar-color, 5%);
+		@-webkit-scrollbar-color-active: darken(@-webkit-scrollbar-color, 5%);
+		@-webkit-scrollbar-track-color: lighten(@primary-color-grey, 30%);
+
+	// Scrollbars (IE)
+		@ie-scrollbar-face-color: darken(@primary-color, 13%);
+		@ie-scrollbar-3dlight-color: lighten(@ie-scrollbar-face-color, 10%);
+		@ie-scrollbar-highlight-color: lighten(@ie-scrollbar-face-color, 15%);
+		@ie-scrollbar-track-color: @primary-color-grey;
+		@ie-scrollbar-arrow-color: #FFFFFF;
+		@ie-scrollbar-shadow-color: darken(@ie-scrollbar-face-color, 10%);
+		@ie-scrollbar-dark-shadow-color: darken(@ie-scrollbar-face-color, 15%);
+
+	// Grid
+		@grid-boxed-border-size: 1px;
+		@grid-boxed-border-style: solid;
+		@grid-boxed-border-color: #DDDDDD;
+		@grid-boxed-background: #FFFFFF;
+
+	// Typography
+		@font-color: #7B7B7B;
+
+		@link-color: @primary-color;
+		@link-color-hover: lighten(@primary-color, 10%);
+
+		@horizontal-line-size: 1px;
+		@horizontal-line-style: solid;
+		@horizontal-line-color: #E2E2E2;
+
+		@h1-font-color: @primary-color;
+		@h2-font-color: @primary-color;
+		@h3-font-color: @primary-color;
+		@h4-font-color: @primary-color;
+		@h5-font-color: @primary-color;
+		@h6-font-color: @primary-color;
+
+		@blockquote-border-size: 5px;
+		@blockquote-border-style: solid;
+		@blockquote-border-color: #E2E2E2;
+		@blockquote-border-color-hover: @primary-color;
+		@blockquote-background-color: #FFFFFF;
+		@blockquote-font-color: #7B7B7B;
+
+	// Forms
+		@input-border-size: 1px;
+		@input-border-style: solid;
+		@input-border-color: #E2E2E2;
+		@input-border-color-hover: darken(#E2E2E2, 5%);
+		@input-border-color-focus: darken(#E2E2E2, 10%);
+		@input-background-color: #FFFFFF;
+		@input-font-color: #6B6B6B;
+
+		@button-border-size: 1px;
+		@button-border-style: solid;
+		@button-border-color: darken(@primary-color, 5%);
+		@button-border-color-hover: darken(@primary-color, 3%);
+		@button-border-color-click: darken(@primary-color, 8%);
+		@button-background-color: @primary-color;
+		@button-background-color-hover: lighten(@primary-color, 4%);
+		@button-background-color-click: lighten(@primary-color, 2%);
+		@button-font-color: #FFFFFF;
+		@button-font-color-hover: #FFFFFF;
+		@button-font-color-click: #EEEEEE;
+
+	// JavaScript Disabled
+		@no-script-border-size: 1px;
+		@no-script-border-style: solid;
+		@no-script-border-color: darken(#FFF6BF, 13%);
+		@no-script-background-color: #FFF6BF;
+		@no-script-font-color: #7B7B7B;
+		@no-script-link-color: @primary-color;
+		@no-script-link-color-hover: lighten(@primary-color, 10%);

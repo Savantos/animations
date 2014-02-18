@@ -1,7 +1,7 @@
-Animations v1.0
+Animations v1.1
 ===============
 
-Easily add a set of predefined CSS3 animations to elements to execute as they enter the viewport or to trigger via JavaScript or mouse hover.
+A versatile CSS3 animation pack with various usages, trigger CSS3 animations as elements enter the viewport, element mouse hover or bind via JavaScript click functions.
 
 **Demo:** http://www.cloud-eight.com/github/animations/
 
@@ -83,42 +83,65 @@ The plugin will auto detect elements in view on page load, any other element ass
 | Spin Right           | spinLeft          |
 
 
-Triggers and Hovers
-===================
+Click and Hovers
+================
 
-There are 2 types of predefined trigger functions, 1 that executes the animation once and another which loops continuously.
+There are 2 types of predefined animated trigger functions, 1 that executes the animation once and another which loops continuously/infinitely.
 You can pass 2 variables into these functions and that is the ID/Class of the target element and what type of animation you want to execute.
 Multiple elements can be targeted by seperating them with a comma.
 
 ```
-<button onclick="triggerOnce('#logo', 'wave');">Wave Once</button>
-<button onclick="triggerInfinite('#logo, #tagline', 'wave');">Wave Continuously</button>
+<button onclick="animateOnce('#logo', 'wave');">Wave Once</button>
+<button onclick="animateInfinite('#logo, #tagline', 'wave');">Wave Continuously</button>
 ```
 
-You can also use `onHover*` class to assign the animation to the `:hover` psuedo selector, adding the class `infinite` will continuously loop the animation while hovering.
+To stop an element from animating you can use the `animateEnd` function and passing the element ID/Class.
 
 ```
-<button class="onHoverSpin">Spin Once</button>
-<button class="onHoverSpin infinite">Spin Continuously</button>
+<button onclick="endTrigger('#logo');">End Wave</button>
 ```
 
-| Animation  | Triggers | Class Name | Hovers | Class Name       |
-|:----------:|:--------:|:----------:|:------:|:----------------:|
-| Flash      | Yes      | flash      | Yes    | onHoverFlash     |
-| Strobe     | Yes      | strobe     | Yes    | onHoverStrobe    |
-| Shake      | Yes      | shake      | Yes    | onHoverShake     |
-| Bounce     | Yes      | bounce     | Yes    | onHoverBounce    |
-| Tada       | Yes      | tada       | Yes    | onHoverTada      |
-| Wave       | Yes      | wave       | Yes    | onHoverWave      |
-| Spin       | Yes      | spin       | Yes    | onHoverSpin      |
-| Pullback   | Yes      | pullback   | Yes    | onHoverPullback  |
-| Wobble     | Yes      | wobble     | Yes    | onHoverWobble    |
-| Pulse      | Yes      | pulse      | Yes    | onHoverPulse     |
-| Pulsate    | Yes      | pulsate    | Yes    | onHoverPulsate   |
-| Heartbeat  | Yes      | heartbeat  | Yes    | onHoverHeartbeat |
-| Panic      | Yes      | panic      | Yes    | onHoverPanic     |
-| Explode    | Yes      | explode    | No     |                  |
-| Random     | Yes      | random     | No     |                  |
+You can also use `hover-*` class to assign the animation to the `:hover` psuedo selector, adding the class `infinite` will continuously loop the animation while hovering.
+
+```
+<button class="hover-spin">Spin Once</button>
+<button class="hover-spin infinite">Spin Continuously</button>
+```
+
+| Animation  | Click | Class Name | Hover | Class Name      |
+|:----------:|:-----:|:----------:|:-----:|:---------------:|
+| Flash      | Yes   | flash      | Yes   | hover-flash     |
+| Strobe     | Yes   | strobe     | Yes   | hover-strobe    |
+| Shake      | Yes   | shake      | Yes   | hover-shake     |
+| Bounce     | Yes   | bounce     | Yes   | hover-bounce    |
+| Tada       | Yes   | tada       | Yes   | hover-tada      |
+| Wave       | Yes   | wave       | Yes   | hover-wave      |
+| Spin       | Yes   | spin       | Yes   | hover-spin      |
+| Pullback   | Yes   | pullback   | Yes   | hover-pullback  |
+| Wobble     | Yes   | wobble     | Yes   | hover-wobble    |
+| Pulse      | Yes   | pulse      | Yes   | hover-pulse     |
+| Pulsate    | Yes   | pulsate    | Yes   | hover-pulsate   |
+| Heartbeat  | Yes   | heartbeat  | Yes   | hover-heartbeat |
+| Panic      | Yes   | panic      | Yes   | hover-panic     |
+| Explode    | Yes   | explode    | No    |                 |
+| Random     | Yes   | random     | No    |                 |
+
+
+Progress Bars
+=============
+
+Using progress bars requires a simple HTML markup and a few select class names.
+It also uses the [Flat UI Color Scheme](http://flatuicolors.com/) to help style the progress, if color classes aren't provided it uses a default grey color scheme.
+There are 2 data attributes you must specify `data-progress-bar-percent` is how far the bar will animate to and `data-progress-bar-delay` works the same way as `data-anim-delay` when animating elements.
+Since it relies on jQuery to animate the bars length from 0 to 'x', applying the class `bar-*` to the `progress-bar` element works as a CSS fallback.
+
+```
+<div class="progress-bar-container color-nephriti">
+	<div class="progress-bar bar-50 color-emerald" data-progress-bar-percent="50" data-progress-bar-delay="100">
+		<div class="progress-bar-fill"></div>
+	</div>
+</div>
+```
 
 
 Browser Compatibility
@@ -135,8 +158,8 @@ Most mobile browsers
 Limitations
 ===========
 
-Since this uses Digital Fusions' visible plugin, the same limitations apply to this also, in that it will not check for visibility in nested scrollable areas, only on the main viewport (window object).
-Animations executing on elements entering the viewport will not work if JavaScript is disabled, it will just display the element normally.
+Since this uses Digital Fusions' visible plugin to animate elements as they enter the viewport, the same limitations apply to this plugin also, in that it will not check for visibility in nested scrollable areas, only on the main viewport (window object).
+Animations executing on elements entering the viewport will not work if JavaScript is disabled.
 Animations are currently limited to devices with a viewport of 960px (wide) and higher.
 
 

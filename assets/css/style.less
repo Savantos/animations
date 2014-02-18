@@ -1,0 +1,104 @@
+//	Animations v1.1, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
+//	==================================================================================
+
+//	Table of Contents
+//	==================================================
+//		#Imports
+//		#Header
+//		#Content
+//		#Footer
+
+
+//	#Imports
+//	===================================================
+
+	@import 'backbone-vars';
+	@import 'backbone-mixins';
+	@import 'backbone-frame';
+
+
+//	#Header
+//	==================================================
+
+	#header {
+		padding: 50px 0 30px;
+		background-color: @primary-color;
+		color: #FFF;
+		text-align: center;
+		text-shadow: 1px 1px 0 #000;
+		overflow: hidden;
+	}
+
+	#header a { color: #FFF; }
+
+	#logo {
+		display: block;
+		margin: 0 auto 20px auto;
+		-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+		-moz-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+		box-shadow: 0 0 10px rgba(0,0,0,0.5);
+		-webkit-border-radius: 100%;
+		-moz-border-radius: 100%;
+		border-radius: 100%;
+		width: 125px;
+		height: 125px;
+		overflow: hidden;
+	}
+
+	#logo img {
+		width: 100%;
+		-webkit-border-radius: 100%;
+		-moz-border-radius: 100%;
+		border-radius: 100%;
+	}
+
+	#logo-title {
+		color: #FFF;
+		font-size: 2em;
+	}
+
+	.social-icon {
+		display: inline-block;
+		margin: 0 4px;
+		border: 1px solid rgba(0,0,0,0.2);
+		-webkit-border-radius: 100%;
+		-moz-border-radius: 100%;
+		border-radius: 100%;
+		width: 40px;
+		height: 40px;
+		font-size: 1.4em;
+		text-shadow: none;
+		line-height: 40px;
+		position: relative;
+	}
+
+	.social-icon a {
+		display: block;
+		width: 40px;
+		height: 40px;
+	}
+
+	.social-icon#facebook { background: #3B5998; }
+	.social-icon#twitter { background: #00ACED; }
+	.social-icon#google-plus { background: #D34836; }
+	.social-icon#pinterest { background: #CB2027; }
+	.social-icon#rss { background: #FF6600; }
+
+
+//	#Content
+//	==================================================
+
+	.content {
+		border-bottom: 1px solid #DDDDDD;
+		padding: 40px 0;
+		overflow: hidden;
+	}
+
+	.content.odd { background: #F5F5F5; }
+	.content.even { background: #F2F2F2; }
+	
+
+//	#Footer
+//	==================================================
+
+	
