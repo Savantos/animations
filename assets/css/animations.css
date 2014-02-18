@@ -4775,47 +4775,6 @@
 		background: #444;
 	}
 
-	.progress-bar.color-turquoise		{ background: #1abc9c; }
-	.progress-bar.color-green-sea		{ background: #16a085; }
-	.progress-bar.color-emerald			{ background: #2ecc71; }
-	.progress-bar.color-nephritis		{ background: #27ae60; }
-	.progress-bar.color-peter-river		{ background: #3498db; }
-	.progress-bar.color-belize-hole		{ background: #2980b9; }
-	.progress-bar.color-amethyst		{ background: #9b59b6; }
-	.progress-bar.color-wisteria		{ background: #8e44ad; }
-	.progress-bar.color-wet-asphalt		{ background: #34495e; }
-	.progress-bar.color-midnight-blue	{ background: #2c3e50; }
-	.progress-bar.color-sun-flower		{ background: #f1c40f; }
-	.progress-bar.color-orange			{ background: #f39c12; }
-	.progress-bar.color-carrot			{ background: #e67e22; }
-	.progress-bar.color-pumpkin			{ background: #d35400; }
-	.progress-bar.color-alizarin		{ background: #e74c3c; }
-	.progress-bar.color-pomegranate		{ background: #c0392b; }
-	.progress-bar.color-clouds			{ background: #ecf0f1; }
-	.progress-bar.color-silver			{ background: #bdc3c7; }
-	.progress-bar.color-concrete		{ background: #95a5a6; }
-	.progress-bar.color-asbestos		{ background: #7f8c8d; }
-
-	@-webkit-keyframes progressStripe {
-		to { background-position: 30px 0; }
-	}
-
-	@-moz-keyframes progressStripe {
-		to { background-position: 30px 0; }
-	}
-
-	@-ms-keyframes progressStripe {
-		to { background-position: 30px 0; }
-	}
-
-	@-o-keyframes progressStripe {
-		to { background-position: 30px 0; }
-	}
-
-	@keyframes progressStripe {
-		to { background-position: 30px 0; }
-	}
-
 	.progress-bar.bar-100	{ width: 100%; }
 	.progress-bar.bar-99	{ width: 99%;  }
 	.progress-bar.bar-98	{ width: 98%;  }
@@ -4907,28 +4866,114 @@
 	.progress-bar.bar-12	{ width: 12%;  }
 	.progress-bar.bar-11	{ width: 11%;  }
 	.progress-bar.bar-10	{ width: 10%;  }
-	.progress-bar.bar-9		{ width: 9%;  }
-	.progress-bar.bar-8		{ width: 8%;  }
-	.progress-bar.bar-7		{ width: 7%;  }
-	.progress-bar.bar-6		{ width: 6%;  }
-	.progress-bar.bar-5		{ width: 5%;  }
-	.progress-bar.bar-4		{ width: 4%;  }
-	.progress-bar.bar-3		{ width: 3%;  }
-	.progress-bar.bar-2		{ width: 2%;  }
-	.progress-bar.bar-1		{ width: 1%;  }
-	.progress-bar.bar-0		{ width: 0%;  }
+	.progress-bar.bar-9		{ width: 9%;   }
+	.progress-bar.bar-8		{ width: 8%;   }
+	.progress-bar.bar-7		{ width: 7%;   }
+	.progress-bar.bar-6		{ width: 6%;   }
+	.progress-bar.bar-5		{ width: 5%;   }
+	.progress-bar.bar-4		{ width: 4%;   }
+	.progress-bar.bar-3		{ width: 3%;   }
+	.progress-bar.bar-2		{ width: 2%;   }
+	.progress-bar.bar-1		{ width: 1%;   }
+	.progress-bar.bar-0		{ width: 0%;   }
 
-	.progress-bar-fill {
+	.progress-bar.color-turquoise		{ background: #1abc9c; }
+	.progress-bar.color-green-sea		{ background: #16a085; }
+
+	.progress-bar.color-emerald			{ background: #2ecc71; }
+	.progress-bar.color-nephritis		{ background: #27ae60; }
+
+	.progress-bar.color-peter-river		{ background: #3498db; }
+	.progress-bar.color-belize-hole		{ background: #2980b9; }
+
+	.progress-bar.color-amethyst		{ background: #9b59b6; }
+	.progress-bar.color-wisteria		{ background: #8e44ad; }
+
+	.progress-bar.color-wet-asphalt		{ background: #34495e; }
+	.progress-bar.color-midnight-blue	{ background: #2c3e50; }
+
+	.progress-bar.color-sun-flower		{ background: #f1c40f; }
+	.progress-bar.color-orange			{ background: #f39c12; }
+
+	.progress-bar.color-carrot			{ background: #e67e22; }
+	.progress-bar.color-pumpkin			{ background: #d35400; }
+
+	.progress-bar.color-alizarin		{ background: #e74c3c; }
+	.progress-bar.color-pomegranate		{ background: #c0392b; }
+
+	.progress-bar.color-clouds			{ background: #ecf0f1; }
+	.progress-bar.color-silver			{ background: #bdc3c7; }
+
+	.progress-bar.color-concrete		{ background: #95a5a6; }
+	.progress-bar.color-asbestos		{ background: #7f8c8d; }
+
+	@-webkit-keyframes progressStripeLTR {
+		to { background-position: 30px 0; }
+	}
+
+	@-moz-keyframes progressStripeLTR {
+		to { background-position: 30px 0; }
+	}
+
+	@-ms-keyframes progressStripeLTR {
+		to { background-position: 30px 0; }
+	}
+
+	@-o-keyframes progressStripeLTR {
+		to { background-position: 30px 0; }
+	}
+
+	@keyframes progressStripeLTR {
+		to { background-position: 30px 0; }
+	}
+
+	@-webkit-keyframes progressStripeRTL {
+		to { background-position: -30px 0; }
+	}
+
+	@-moz-keyframes progressStripeRTL {
+		to { background-position: -30px 0; }
+	}
+
+	@-ms-keyframes progressStripeRTL {
+		to { background-position: -30px 0; }
+	}
+
+	@-o-keyframes progressStripeRTL {
+		to { background-position: -30px 0; }
+	}
+
+	@keyframes progressStripeRTL {
+		to { background-position: -30px 0; }
+	}
+
+	.progress-bar-candy {
 		width: 100%;
 		height: 15px;
+		-webkit-border-radius: 20px;
+		-moz-border-radius: 20px;
 		border-radius: 20px;
-		-webkit-animation: progressStripe .6s linear infinite;
-		-moz-animation: progressStripe .6s linear infinite;
-		-ms-animation: progressStripe .6s linear infinite;
-		-o-animation: progressStripe .6s linear infinite;
-		animation: progressStripe .6s linear infinite;
+		background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
+		background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
+		background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
+		background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
+		background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
 		background-repeat: repeat-x;
 		background-size: 30px 30px;
-		background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
-		background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
+	}
+
+	.progress-bar-candy.candy-ltr {
+		-webkit-animation: progressStripeLTR .6s linear infinite;
+		-moz-animation: progressStripeLTR .6s linear infinite;
+		-ms-animation: progressStripeLTR .6s linear infinite;
+		-o-animation: progressStripeLTR .6s linear infinite;
+		animation: progressStripeLTR .6s linear infinite;
+	}
+
+	.progress-bar-candy.candy-rtl {
+		-webkit-animation: progressStripeRTL .6s linear infinite;
+		-moz-animation: progressStripeRTL .6s linear infinite;
+		-ms-animation: progressStripeRTL .6s linear infinite;
+		-o-animation: progressStripeRTL .6s linear infinite;
+		animation: progressStripeRTL .6s linear infinite;
 	}
