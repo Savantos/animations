@@ -1,4 +1,4 @@
-Animations v1.1
+Animations v1.2
 ===============
 
 A versatile CSS3 animation pack with various usages, trigger CSS3 animations as elements enter the viewport, as you hover with a mouse or by binding them via JavaScript functions.
@@ -82,6 +82,13 @@ The plugin will auto detect elements in view on page load, any other element ass
 | Bounce Out Right     | bounceOutRight    |
 | Spin Left            | spinRight         |
 | Spin Right           | spinLeft          |
+
+By default animation speeds/times are 1 second, if you wish to adjust this time you can add the class `slow-mo` or `ultra-slow-mo`. `slow-mo` will set this 2 seconds and `ultra-slow-mo` to 4seconds
+
+```
+<div class="animate slow-mo" data-anim-type="bounceIn" data-anim-delay="200">Bouncy Bouncy</div>
+<div class="animate ultra-slow-mo" data-anim-type="bounceIn" data-anim-delay="200">Bouncy Bouncy</div>
+```
 
 
 Click and Hovers

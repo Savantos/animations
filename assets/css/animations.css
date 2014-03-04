@@ -1,4 +1,4 @@
-/*	Animations v1.1, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
+/*	Animations v1.2, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
 //	================================================================================== */
 
 /*	Table of Contents
@@ -110,6 +110,52 @@
 		-ms-animation-fill-mode: both;
 		-o-animation-fill-mode: both;
 		animation-fill-mode: both;
+	}
+
+	.animate.slow-mo,
+	.trigger.slow-mo,
+	.hover-flash.slow-mo,
+	.hover-strobe.slow-mo,
+	.hover-shake.slow-mo,
+	.hover-bounce.slow-mo,
+	.hover-tada.slow-mo,
+	.hover-wave.slow-mo,
+	.hover-spin.slow-mo,
+	.hover-pullback.slow-mo,
+	.hover-wobble.slow-mo,
+	.hover-pulse.slow-mo,
+	.hover-pulsate.slow-mo,
+	.hover-heartbeat.slow-mo,
+	.hover-panic.slow-mo,
+	.hover-explode.slow-mo {
+		-webkit-animation-duration: 2s;
+		-moz-animation-duration: 2s;
+		-ms-animation-duration: 2s;
+		-o-animation-duration: 2s;
+		animation-duration: 2s;
+	}
+
+	.animate.ultra-slow-mo,
+	.trigger.ultra-slow-mo,
+	.hover-flash.ultra-slow-mo,
+	.hover-strobe.ultra-slow-mo,
+	.hover-shake.ultra-slow-mo,
+	.hover-bounce.ultra-slow-mo,
+	.hover-tada.ultra-slow-mo,
+	.hover-wave.ultra-slow-mo,
+	.hover-spin.ultra-slow-mo,
+	.hover-pullback.ultra-slow-mo,
+	.hover-wobble.ultra-slow-mo,
+	.hover-pulse.ultra-slow-mo,
+	.hover-pulsate.ultra-slow-mo,
+	.hover-heartbeat.ultra-slow-mo,
+	.hover-panic.ultra-slow-mo,
+	.hover-explode.ultra-slow-mo {
+		-webkit-animation-duration: 4s;
+		-moz-animation-duration: 4s;
+		-ms-animation-duration: 4s;
+		-o-animation-duration: 4s;
+		animation-duration: 4s;
 	}
 
 	.no-js .animate,

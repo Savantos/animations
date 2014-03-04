@@ -1,4 +1,4 @@
-//	Animations v1.1, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
+//	Animations v1.2, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
 //	==================================================================================
 
 //	Visible, Sam Sehnert, samatdf, TeamDF, https://github.com/teamdf/jquery-visible/
