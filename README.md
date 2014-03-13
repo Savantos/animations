@@ -1,7 +1,7 @@
-Animations v1.2
+Animations v1.3
 ===============
 
-A versatile CSS3 animation pack with various usages, trigger CSS3 animations as elements enter the viewport, as you hover with a mouse or by binding them via JavaScript functions.
+A versatile CSS3 animation pack with various usages. Trigger CSS3 animations as elements enter the viewport, as you hover with a mouse or by binding them via JavaScript functions/event listeners.
 
 **Demo:** http://www.cloud-eight.com/github/animations/
 
@@ -19,7 +19,7 @@ Usage
 Animations
 ==========
 
-The plugin will auto detect elements in view on page load, any other element assigned with the `animate` class and a `data-anim-type` attribute will be executed as it enters the viewport.
+The plugin will auto detect elements in view on page load, any other element assigned with the `animate` class and a `data-anim-type` attribute will be executed as it enters the viewport upon scrolling.
 
 <ul>
   <li>Add the class `no-js` to your `html` tag also</li>
@@ -83,11 +83,13 @@ The plugin will auto detect elements in view on page load, any other element ass
 | Spin Left            | spinRight         |
 | Spin Right           | spinLeft          |
 
-By default animation speeds/times are 1 second, if you wish to adjust this time you can add the class `slow-mo` or `ultra-slow-mo`. `slow-mo` will set this 2 seconds and `ultra-slow-mo` to 4seconds
+By default, animation duration time/speed is 1 second, if you wish to adjust this duration you can add the class `slow-mo` (2 seconds), `super-slow-mo` (3 seconds), `ultra-slow-mo` (4 seconds) or `hyper-slow-mo` (5 seconds).
 
 ```
 <div class="animate slow-mo" data-anim-type="bounceIn" data-anim-delay="200">Bouncy Bouncy</div>
+<div class="animate super-slow-mo" data-anim-type="bounceIn" data-anim-delay="200">Bouncy Bouncy</div>
 <div class="animate ultra-slow-mo" data-anim-type="bounceIn" data-anim-delay="200">Bouncy Bouncy</div>
+<div class="animate hyper-slow-mo" data-anim-type="bounceIn" data-anim-delay="200">Bouncy Bouncy</div>
 ```
 
 
@@ -131,7 +133,6 @@ You can also use the `hover-*` class to assign the animation to the `:hover` psu
 | Pulsate    | Yes   | pulsate    | Yes   | hover-pulsate   |
 | Heartbeat  | Yes   | heartbeat  | Yes   | hover-heartbeat |
 | Panic      | Yes   | panic      | Yes   | hover-panic     |
-| Explode    | Yes   | explode    | No    |                 |
 | Random     | Yes   | random     | No    |                 |
 
 
@@ -188,3 +189,6 @@ Credits
 
 Visible.js, TeamDF, Digital Fusion<br />
 http://www.teamdf.com
+
+Flat UI Colors, Ahmet Sülek<br />
+http://flatuicolors.com/

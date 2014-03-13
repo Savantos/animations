@@ -1,4 +1,4 @@
-//	Animations v1.2, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
+//	Animations v1.3, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
 //	==================================================================================
 
 //	Visible, Sam Sehnert, samatdf, TeamDF, https://github.com/teamdf/jquery-visible/
@@ -82,7 +82,7 @@
 		}
 
 	// Variables
-		var	triggerClasses = 'flash strobe shake bounce tada wave spin pullback wobble pulse pulsate heartbeat panic explode';
+		var	triggerClasses = 'flash strobe shake bounce tada wave spin pullback wobble pulse pulsate heartbeat panic';
 			
 		var	classesArray = new Array;
 			classesArray = triggerClasses.split(' ');
