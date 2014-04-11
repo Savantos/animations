@@ -1,4 +1,4 @@
-Animations v1.3
+Animations v1.4
 ===============
 
 A versatile CSS3 animation pack with various usages. Trigger CSS3 animations as elements enter the viewport, as you hover with a mouse or by binding them via JavaScript functions/event listeners.
@@ -10,8 +10,8 @@ Usage
 =====
 
 <ul>
-  <li>Use the IE conditional statements with your `html` tags shown below</li>
-  <li>Link both animations.min.css and animations.min.js to your document</li>
+  <li>Add the class `no-js` to your `html` tag</li>
+  <li>Link 'animations.min.css', 'animations.min.js' and 'visible.min.js' (TeamDF) to your document</li>
   <li>Follow the guides below depending on what aspect of the plugin you wish to use</li>
 </ul>
 
@@ -22,7 +22,6 @@ Animations
 The plugin will auto detect elements in view on page load, any other element assigned with the `animate` class and a `data-anim-type` attribute will be executed as it enters the viewport upon scrolling.
 
 <ul>
-  <li>Add the class `no-js` to your `html` tag also</li>
   <li>Add the class `animate` to the desired element</li>
   <li>Add the attribute `data-anim-type` with an animation type listed below</li>
   <li>(Optional) Add the attribute `data-anim-delay` if you wish to put a delay (in ms) on the animation</li>
@@ -108,7 +107,7 @@ Multiple elements can be targeted by seperating them with a comma.
 To stop an element from animating you can use the `animateEnd` function and passing the element ID/Class.
 
 ```
-<button onclick="endTrigger('#element');">End Wave</button>
+<button onclick="animateEnd('#element');">End Wave</button>
 ```
 
 You can also use the `hover-*` class to assign the animation to the `:hover` psuedo selector, adding the class `infinite` will continuously loop the animation while hovering.
@@ -134,26 +133,6 @@ You can also use the `hover-*` class to assign the animation to the `:hover` psu
 | Heartbeat  | Yes   | heartbeat  | Yes   | hover-heartbeat |
 | Panic      | Yes   | panic      | Yes   | hover-panic     |
 | Random     | Yes   | random     | No    |                 |
-
-
-Progress Bars
-=============
-
-Using progress bars requires a simple HTML markup and a few select class names.
-It also uses the [Flat UI Color Scheme](http://flatuicolors.com/) to help style the progress bars, if color classes aren't provided it uses a default grey color scheme.
-There are 2 data attributes you must specify `data-progress-bar-percent` is how far the bar will animate to and `data-progress-bar-delay` works the same way as `data-anim-delay` when animating elements.
-Since it relies on jQuery to animate the bars length from 0 to 'x', applying the class `bar-*` to the `progress-bar` element works as a CSS fallback.
-
-```
-<div class="progress-bar-container color-nephriti">
-  <div class="progress-bar bar-50 color-emerald" data-progress-bar-percent="50" data-progress-bar-delay="100">
-    <div class="progress-bar-candy"></div>
-  </div>
-</div>
-```
-
-By default, the candy stripe is static, to animate the stripes left or right, apply either the `candy-ltr` or `candy-rtl` class on the `progress-bar-candy` element.
-To remove the candy stripes, simply remove the `progress-bar-candy` element to leave a solid progress bar.
 
 
 Browser Compatibility
@@ -189,6 +168,3 @@ Credits
 
 Visible.js, TeamDF, Digital Fusion<br />
 http://www.teamdf.com
-
-Flat UI Colors, Ahmet Sülek<br />
-http://flatuicolors.com/

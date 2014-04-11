@@ -1,4 +1,4 @@
-/*	Animations v1.3, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
+/*	Animations v1.4, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
 //	================================================================================== */
 
 /*	Table of Contents
@@ -61,17 +61,17 @@
 //		#Bounce Out Left
 //		#Bounce Out Right
 
-//		#Spin Left
-//		#Spin Right
-
 //		#Flash
 //		#Strobe
-//		#Shake
+//		#Shake Horizontally
+//		#Shake Vertically
 //		#Bounce
 //		#Tada
 //		#Wave
-//		#Spin
-//		#Pullback
+//		#Spin Clockwise
+//		#Spin Counter-Clockwise
+//		#Slingshot Clockwise
+//		#Slingshot Counter-Clockwise
 //		#Wobble
 //		#Pulse
 //		#Pulsate
@@ -86,12 +86,15 @@
 	.trigger,
 	.hover-flash,
 	.hover-strobe,
-	.hover-shake,
+	.hover-shakeH,
+	.hover-shakeV,
 	.hover-bounce,
 	.hover-tada,
 	.hover-wave,
-	.hover-spin,
-	.hover-pullback,
+	.hover-spinCW,
+	.hover-spinCCW,
+	.hover-slingshotCW,
+	.hover-slingshotCCW,
 	.hover-wobble,
 	.hover-pulse,
 	.hover-pulsate,
@@ -114,12 +117,15 @@
 	.trigger.slow-mo,
 	.hover-flash.slow-mo,
 	.hover-strobe.slow-mo,
-	.hover-shake.slow-mo,
+	.hover-shakeH.slow-mo,
+	.hover-shakeV.slow-mo,
 	.hover-bounce.slow-mo,
 	.hover-tada.slow-mo,
 	.hover-wave.slow-mo,
-	.hover-spin.slow-mo,
-	.hover-pullback.slow-mo,
+	.hover-spinCW.slow-mo,
+	.hover-spinCCW.slow-mo,
+	.hover-slingshotCW.slow-mo,
+	.hover-slingshotCCW.slow-mo,
 	.hover-wobble.slow-mo,
 	.hover-pulse.slow-mo,
 	.hover-pulsate.slow-mo,
@@ -136,12 +142,15 @@
 	.trigger.super-slow-mo,
 	.hover-flash.super-slow-mo,
 	.hover-strobe.super-slow-mo,
-	.hover-shake.super-slow-mo,
+	.hover-shakeH.super-slow-mo,
+	.hover-shakeV.super-slow-mo,
 	.hover-bounce.super-slow-mo,
 	.hover-tada.super-slow-mo,
 	.hover-wave.super-slow-mo,
-	.hover-spin.super-slow-mo,
-	.hover-pullback.super-slow-mo,
+	.hover-spinCW.super-slow-mo,
+	.hover-spinCCW.super-slow-mo,
+	.hover-slingshotCW.super-slow-mo,
+	.hover-slingshotCCW.super-slow-mo,
 	.hover-wobble.super-slow-mo,
 	.hover-pulse.super-slow-mo,
 	.hover-pulsate.super-slow-mo,
@@ -158,12 +167,15 @@
 	.trigger.ultra-slow-mo,
 	.hover-flash.ultra-slow-mo,
 	.hover-strobe.ultra-slow-mo,
-	.hover-shake.ultra-slow-mo,
+	.hover-shakeH.ultra-slow-mo,
+	.hover-shakeV.ultra-slow-mo,
 	.hover-bounce.ultra-slow-mo,
 	.hover-tada.ultra-slow-mo,
 	.hover-wave.ultra-slow-mo,
-	.hover-spin.ultra-slow-mo,
-	.hover-pullback.ultra-slow-mo,
+	.hover-spinCW.ultra-slow-mo,
+	.hover-spinCCW.ultra-slow-mo,
+	.hover-slingshotCW.ultra-slow-mo,
+	.hover-slingshotCCW.ultra-slow-mo,
 	.hover-wobble.ultra-slow-mo,
 	.hover-pulse.ultra-slow-mo,
 	.hover-pulsate.ultra-slow-mo,
@@ -180,12 +192,15 @@
 	.trigger.hyper-slow-mo,
 	.hover-flash.hyper-slow-mo,
 	.hover-strobe.hyper-slow-mo,
-	.hover-shake.hyper-slow-mo,
+	.hover-shakeH.hyper-slow-mo,
+	.hover-shakeV.hyper-slow-mo,
 	.hover-bounce.hyper-slow-mo,
 	.hover-tada.hyper-slow-mo,
 	.hover-wave.hyper-slow-mo,
-	.hover-spin.hyper-slow-mo,
-	.hover-pullback.hyper-slow-mo,
+	.hover-spinCW.hyper-slow-mo,
+	.hover-spinCCW.hyper-slow-mo,
+	.hover-slingshotCW.hyper-slow-mo,
+	.hover-slingshotCCW.hyper-slow-mo,
 	.hover-wobble.hyper-slow-mo,
 	.hover-pulse.hyper-slow-mo,
 	.hover-pulsate.hyper-slow-mo,
@@ -203,12 +218,15 @@
 	.trigger,
 	.hover-flash,
 	.hover-strobe,
-	.hover-shake,
+	.hover-shakeH,
+	.hover-shakeV,
 	.hover-bounce,
 	.hover-tada,
 	.hover-wave,
-	.hover-spin,
-	.hover-pullback,
+	.hover-spinCW,
+	.hover-spinCCW,
+	.hover-slingshotCW,
+	.hover-slingshotCCW,
 	.hover-wobble,
 	.hover-pulse,
 	.hover-pulsate,
@@ -219,12 +237,15 @@
 	.trigger.infinite,
 	.hover-flash.infinite,
 	.hover-strobe.infinite,
-	.hover-shake.infinite,
+	.hover-shakeH.infinite,
+	.hover-shakeV.infinite,
 	.hover-bounce.infinite,
 	.hover-tada.infinite,
 	.hover-wave.infinite,
-	.hover-spin.infinite,
-	.hover-pullback.infinite,
+	.hover-spinCW.infinite,
+	.hover-spinCCW.infinite,
+	.hover-slingshotCW.infinite,
+	.hover-slingshotCCW.infinite,
 	.hover-wobble.infinite,
 	.hover-pulse.infinite,
 	.hover-pulsate.infinite,
@@ -266,8 +287,7 @@
 		100% { opacity: 1; }
 	}
 
-	.animate.fadeIn,
-	.trigger.fadeIn {
+	.animate.fadeIn {
 		-webkit-animation-name: fadeIn;
 		-moz-animation-name: fadeIn;
 		-ms-animation-name: fadeIn;
@@ -339,8 +359,7 @@
 		}
 	}
 
-	.animate.fadeInUp,
-	.trigger.fadeInUp {
+	.animate.fadeInUp {
 		-webkit-animation-name: fadeInUp;
 		-moz-animation-name: fadeInUp;
 		-ms-animation-name: fadeInUp;
@@ -412,8 +431,7 @@
 		}
 	}
 
-	.animate.fadeInDown,
-	.trigger.fadeInDown {
+	.animate.fadeInDown {
 		-webkit-animation-name: fadeInDown;
 		-moz-animation-name: fadeInDown;
 		-ms-animation-name: fadeInDown;
@@ -485,8 +503,7 @@
 		}
 	}
 
-	.animate.fadeInLeft,
-	.trigger.fadeInLeft {
+	.animate.fadeInLeft {
 		-webkit-animation-name: fadeInLeft;
 		-moz-animation-name: fadeInLeft;
 		-ms-animation-name: fadeInLeft;
@@ -558,8 +575,7 @@
 		}
 	}
 
-	.animate.fadeInRight,
-	.trigger.fadeInRight {
+	.animate.fadeInRight {
 		-webkit-animation-name: fadeInRight;
 		-moz-animation-name: fadeInRight;
 		-ms-animation-name: fadeInRight;
@@ -631,8 +647,7 @@
 		}
 	}
 
-	.animate.fadeInUpLarge,
-	.trigger.fadeInUpLarge {
+	.animate.fadeInUpLarge {
 		-webkit-animation-name: fadeInUpLarge;
 		-moz-animation-name: fadeInUpLarge;
 		-ms-animation-name: fadeInUpLarge;
@@ -704,8 +719,7 @@
 		}
 	}
 
-	.animate.fadeInDownLarge,
-	.trigger.fadeInDownLarge {
+	.animate.fadeInDownLarge {
 		-webkit-animation-name: fadeInDownLarge;
 		-moz-animation-name: fadeInDownLarge;
 		-ms-animation-name: fadeInDownLarge;
@@ -777,8 +791,7 @@
 		}
 	}
 
-	.animate.fadeInLeftLarge,
-	.trigger.fadeInLeftLarge {
+	.animate.fadeInLeftLarge {
 		-webkit-animation-name: fadeInLeftLarge;
 		-moz-animation-name: fadeInLeftLarge;
 		-ms-animation-name: fadeInLeftLarge;
@@ -850,8 +863,7 @@
 		}
 	}
 
-	.animate.fadeInRightLarge,
-	.trigger.fadeInRightLarge {
+	.animate.fadeInRightLarge {
 		-webkit-animation-name: fadeInRightLarge;
 		-moz-animation-name: fadeInRightLarge;
 		-ms-animation-name: fadeInRightLarge;
@@ -888,8 +900,7 @@
 		100% { opacity: 0; }
 	}
 
-	.animate.fadeOut,
-	.trigger.fadeOut {
+	.animate.fadeOut {
 		-webkit-animation-name: fadeOut;
 		-moz-animation-name: fadeOut;
 		-ms-animation-name: fadeOut;
@@ -961,8 +972,7 @@
 		}
 	}
 
-	.animate.fadeOutUp,
-	.trigger.fadeOutUp {
+	.animate.fadeOutUp {
 		-webkit-animation-name: fadeOutUp;
 		-moz-animation-name: fadeOutUp;
 		-ms-animation-name: fadeOutUp;
@@ -1034,8 +1044,7 @@
 		}
 	}
 
-	.animate.fadeOutDown,
-	.trigger.fadeOutDown {
+	.animate.fadeOutDown {
 		-webkit-animation-name: fadeOutDown;
 		-moz-animation-name: fadeOutDown;
 		-ms-animation-name: fadeOutDown;
@@ -1107,8 +1116,7 @@
 		}
 	}
 
-	.animate.fadeOutLeft,
-	.trigger.fadeOutLeft {
+	.animate.fadeOutLeft {
 		-webkit-animation-name: fadeOutLeft;
 		-moz-animation-name: fadeOutLeft;
 		-ms-animation-name: fadeOutLeft;
@@ -1180,8 +1188,7 @@
 		}
 	}
 
-	.animate.fadeOutRight,
-	.trigger.fadeOutRight {
+	.animate.fadeOutRight {
 		-webkit-animation-name: fadeOutRight;
 		-moz-animation-name: fadeOutRight;
 		-ms-animation-name: fadeOutRight;
@@ -1253,8 +1260,7 @@
 		}
 	}
 
-	.animate.fadeOutUpLarge,
-	.trigger.fadeOutUpLarge {
+	.animate.fadeOutUpLarge {
 		-webkit-animation-name: fadeOutUpLarge;
 		-moz-animation-name: fadeOutUpLarge;
 		-ms-animation-name: fadeOutUpLarge;
@@ -1326,8 +1332,7 @@
 		}
 	}
 
-	.animate.fadeOutDownLarge,
-	.trigger.fadeOutDownLarge {
+	.animate.fadeOutDownLarge {
 		-webkit-animation-name: fadeOutDownLarge;
 		-moz-animation-name: fadeOutDownLarge;
 		-ms-animation-name: fadeOutDownLarge;
@@ -1399,8 +1404,7 @@
 		}
 	}
 
-	.animate.fadeOutLeftLarge,
-	.trigger.fadeOutLeftLarge {
+	.animate.fadeOutLeftLarge {
 		-webkit-animation-name: fadeOutLeftLarge;
 		-moz-animation-name: fadeOutLeftLarge;
 		-ms-animation-name: fadeOutLeftLarge;
@@ -1472,8 +1476,7 @@
 		}
 	}
 
-	.animate.fadeOutRightLarge,
-	.trigger.fadeOutRightLarge {
+	.animate.fadeOutRightLarge {
 		-webkit-animation-name: fadeOutRightLarge;
 		-moz-animation-name: fadeOutRightLarge;
 		-ms-animation-name: fadeOutRightLarge;
@@ -1545,8 +1548,7 @@
 		}
 	}
 
-	.animate.zoomIn,
-	.trigger.zoomIn {
+	.animate.zoomIn {
 		-webkit-animation-name: zoomIn;
 		-moz-animation-name: zoomIn;
 		-ms-animation-name: zoomIn;
@@ -1618,8 +1620,7 @@
 		}
 	}
 
-	.animate.zoomInUp,
-	.trigger.zoomInUp {
+	.animate.zoomInUp {
 		-webkit-animation-name: zoomInUp;
 		-moz-animation-name: zoomInUp;
 		-ms-animation-name: zoomInUp;
@@ -1691,8 +1692,7 @@
 		}
 	}
 
-	.animate.zoomInDown,
-	.trigger.zoomInDown {
+	.animate.zoomInDown {
 		-webkit-animation-name: zoomInDown;
 		-moz-animation-name: zoomInDown;
 		-ms-animation-name: zoomInDown;
@@ -1764,8 +1764,7 @@
 		}
 	}
 
-	.animate.zoomInLeft,
-	.trigger.zoomInLeft {
+	.animate.zoomInLeft {
 		-webkit-animation-name: zoomInLeft;
 		-moz-animation-name: zoomInLeft;
 		-ms-animation-name: zoomInLeft;
@@ -1837,8 +1836,7 @@
 		}
 	}
 
-	.animate.zoomInRight,
-	.trigger.zoomInRight {
+	.animate.zoomInRight {
 		-webkit-animation-name: zoomInRight;
 		-moz-animation-name: zoomInRight;
 		-ms-animation-name: zoomInRight;
@@ -1910,8 +1908,7 @@
 		}
 	}
 
-	.animate.zoomInUpLarge,
-	.trigger.zoomInUpLarge {
+	.animate.zoomInUpLarge {
 		-webkit-animation-name: zoomInUpLarge;
 		-moz-animation-name: zoomInUpLarge;
 		-ms-animation-name: zoomInUpLarge;
@@ -1983,8 +1980,7 @@
 		}
 	}
 
-	.animate.zoomInDownLarge,
-	.trigger.zoomInDownLarge {
+	.animate.zoomInDownLarge {
 		-webkit-animation-name: zoomInDownLarge;
 		-moz-animation-name: zoomInDownLarge;
 		-ms-animation-name: zoomInDownLarge;
@@ -2056,8 +2052,7 @@
 		}
 	}
 
-	.animate.zoomInLeftLarge,
-	.trigger.zoomInLeftLarge {
+	.animate.zoomInLeftLarge {
 		-webkit-animation-name: zoomInLeftLarge;
 		-moz-animation-name: zoomInLeftLarge;
 		-ms-animation-name: zoomInLeftLarge;
@@ -2129,8 +2124,7 @@
 		}
 	}
 
-	.animate.zoomInRightLarge,
-	.trigger.zoomInRightLarge {
+	.animate.zoomInRightLarge {
 		-webkit-animation-name: zoomInRightLarge;
 		-moz-animation-name: zoomInRightLarge;
 		-ms-animation-name: zoomInRightLarge;
@@ -2202,8 +2196,7 @@
 		}
 	}
 
-	.animate.zoomOut,
-	.trigger.zoomOut {
+	.animate.zoomOut {
 		-webkit-animation-name: zoomOut;
 		-moz-animation-name: zoomOut;
 		-ms-animation-name: zoomOut;
@@ -2275,8 +2268,7 @@
 		}
 	}
 
-	.animate.zoomOutUp,
-	.trigger.zoomOutUp {
+	.animate.zoomOutUp {
 		-webkit-animation-name: zoomOutUp;
 		-moz-animation-name: zoomOutUp;
 		-ms-animation-name: zoomOutUp;
@@ -2348,8 +2340,7 @@
 		}
 	}
 
-	.animate.zoomOutDown,
-	.trigger.zoomOutDown {
+	.animate.zoomOutDown {
 		-webkit-animation-name: zoomOutDown;
 		-moz-animation-name: zoomOutDown;
 		-ms-animation-name: zoomOutDown;
@@ -2421,8 +2412,7 @@
 		}
 	}
 
-	.animate.zoomOutLeft,
-	.trigger.zoomOutLeft {
+	.animate.zoomOutLeft {
 		-webkit-animation-name: zoomOutLeft;
 		-moz-animation-name: zoomOutLeft;
 		-ms-animation-name: zoomOutLeft;
@@ -2494,8 +2484,7 @@
 		}
 	}
 
-	.animate.zoomOutRight,
-	.trigger.zoomOutRight {
+	.animate.zoomOutRight {
 		-webkit-animation-name: zoomOutRight;
 		-moz-animation-name: zoomOutRight;
 		-ms-animation-name: zoomOutRight;
@@ -2567,8 +2556,7 @@
 		}
 	}
 
-	.animate.zoomOutUpLarge,
-	.trigger.zoomOutUpLarge {
+	.animate.zoomOutUpLarge {
 		-webkit-animation-name: zoomOutUpLarge;
 		-moz-animation-name: zoomOutUpLarge;
 		-ms-animation-name: zoomOutUpLarge;
@@ -2640,8 +2628,7 @@
 		}
 	}
 
-	.animate.zoomOutDownLarge,
-	.trigger.zoomOutDownLarge {
+	.animate.zoomOutDownLarge {
 		-webkit-animation-name: zoomOutDownLarge;
 		-moz-animation-name: zoomOutDownLarge;
 		-ms-animation-name: zoomOutDownLarge;
@@ -2713,8 +2700,7 @@
 		}
 	}
 
-	.animate.zoomOutLeftLarge,
-	.trigger.zoomOutLeftLarge {
+	.animate.zoomOutLeftLarge {
 		-webkit-animation-name: zoomOutLeftLarge;
 		-moz-animation-name: zoomOutLeftLarge;
 		-ms-animation-name: zoomOutLeftLarge;
@@ -2786,8 +2772,7 @@
 		}
 	}
 
-	.animate.zoomOutRightLarge,
-	.trigger.zoomOutRightLarge {
+	.animate.zoomOutRightLarge {
 		-webkit-animation-name: zoomOutRightLarge;
 		-moz-animation-name: zoomOutRightLarge;
 		-ms-animation-name: zoomOutRightLarge;
@@ -2909,8 +2894,7 @@
 		}
 	}
 
-	.animate.bounceIn,
-	.trigger.bounceIn {
+	.animate.bounceIn {
 		-webkit-animation-name: bounceIn;
 		-moz-animation-name: bounceIn;
 		-ms-animation-name: bounceIn;
@@ -3032,8 +3016,7 @@
 		}
 	}
 
-	.animate.bounceInUp,
-	.trigger.bounceInUp {
+	.animate.bounceInUp {
 		-webkit-animation-name: bounceInUp;
 		-moz-animation-name: bounceInUp;
 		-ms-animation-name: bounceInUp;
@@ -3155,8 +3138,7 @@
 		}
 	}
 
-	.animate.bounceInDown,
-	.trigger.bounceInDown {
+	.animate.bounceInDown {
 		-webkit-animation-name: bounceInDown;
 		-moz-animation-name: bounceInDown;
 		-ms-animation-name: bounceInDown;
@@ -3278,8 +3260,7 @@
 		}
 	}
 
-	.animate.bounceInLeft,
-	.trigger.bounceInLeft {
+	.animate.bounceInLeft {
 		-webkit-animation-name: bounceInLeft;
 		-moz-animation-name: bounceInLeft;
 		-ms-animation-name: bounceInLeft;
@@ -3401,8 +3382,7 @@
 		}
 	}
 
-	.animate.bounceInRight,
-	.trigger.bounceInRight {
+	.animate.bounceInRight {
 		-webkit-animation-name: bounceInRight;
 		-moz-animation-name: bounceInRight;
 		-ms-animation-name: bounceInRight;
@@ -3524,8 +3504,7 @@
 		}
 	}
 
-	.animate.bounceOut,
-	.trigger.bounceOut {
+	.animate.bounceOut {
 		-webkit-animation-name: bounceOut;
 		-moz-animation-name: bounceOut;
 		-ms-animation-name: bounceOut;
@@ -3622,8 +3601,7 @@
 		}
 	}
 
-	.animate.bounceOutUp,
-	.trigger.bounceOutUp {
+	.animate.bounceOutUp {
 		-webkit-animation-name: bounceOutUp;
 		-moz-animation-name: bounceOutUp;
 		-ms-animation-name: bounceOutUp;
@@ -3720,8 +3698,7 @@
 		}
 	}
 
-	.animate.bounceOutDown,
-	.trigger.bounceOutDown {
+	.animate.bounceOutDown {
 		-webkit-animation-name: bounceOutDown;
 		-moz-animation-name: bounceOutDown;
 		-ms-animation-name: bounceOutDown;
@@ -3818,8 +3795,7 @@
 		}
 	}
 
-	.animate.bounceOutLeft,
-	.trigger.bounceOutLeft {
+	.animate.bounceOutLeft {
 		-webkit-animation-name: bounceOutLeft;
 		-moz-animation-name: bounceOutLeft;
 		-ms-animation-name: bounceOutLeft;
@@ -3916,179 +3892,12 @@
 		}
 	}
 
-	.animate.bounceOutRight,
-	.trigger.bounceOutRight {
+	.animate.bounceOutRight {
 		-webkit-animation-name: bounceOutRight;
 		-moz-animation-name: bounceOutRight;
 		-ms-animation-name: bounceOutRight;
 		-o-animation-name: bounceOutRight;
 		animation-name: bounceOutRight;
-	}
-
-
-/*	#Spin Left
-//	================================================== */
-
-	@-webkit-keyframes spinLeft {
-		0% {
-			-webkit-transform-origin: center center;
-			-webkit-transform: rotate(-380deg);
-			opacity: 0;
-		}
-
-		100% {
-			-webkit-transform-origin: center center;
-			-webkit-transform: rotate(0);
-			opacity: 1;
-		}
-	}
-
-	@-moz-keyframes spinLeft {
-		0% {
-			-moz-transform-origin: center center;
-			-moz-transform: rotate(-380deg);
-			opacity: 0;
-		}
-
-		100% {
-			-moz-transform-origin: center center;
-			-moz-transform: rotate(0);
-			opacity: 1;
-		}
-	}
-
-	@-ms-keyframes spinLeft {
-		0% {
-			-ms-transform-origin: center center;
-			-ms-transform: rotate(-380deg);
-			opacity: 0;
-		}
-
-		100% {
-			-ms-transform-origin: center center;
-			-ms-transform: rotate(0);
-			opacity: 1;
-		}
-	}
-
-	@-o-keyframes spinLeft {
-		0% {
-			-o-transform-origin: center center;
-			-o-transform: rotate(-380deg);
-			opacity: 0;
-		}
-
-		100% {
-			-o-transform-origin: center center;
-			-o-transform: rotate(0);
-			opacity: 1;
-		}
-	}
-
-	@keyframes spinLeft {
-		0% {
-			transform-origin: center center;
-			transform: rotate(-380deg);
-			opacity: 0;
-		}
-
-		100% {
-			transform-origin: center center;
-			transform: rotate(0);
-			opacity: 1;
-		}
-	}
-
-	.animate.spinLeft,
-	.trigger.spinLeft {
-		-webkit-animation-name: spinLeft;
-		-moz-animation-name: spinLeft;
-		-ms-animation-name: spinLeft;
-		-o-animation-name: spinLeft;
-		animation-name: spinLeft;
-	}
-
-
-/*	#Spin Right
-//	================================================== */
-
-	@-webkit-keyframes spinRight {
-		0% {
-			-webkit-transform-origin: center center;
-			-webkit-transform: rotate(380deg);
-			opacity: 0;
-		}
-
-		100% {
-			-webkit-transform-origin: center center;
-			-webkit-transform: rotate(0);
-			opacity: 1;
-		}
-	}
-
-	@-moz-keyframes spinRight {
-		0% {
-			-moz-transform-origin: center center;
-			-moz-transform: rotate(380deg);
-			opacity: 0;
-		}
-
-		100% {
-			-moz-transform-origin: center center;
-			-moz-transform: rotate(0);
-			opacity: 1;
-		}
-	}
-
-	@-ms-keyframes spinRight {
-		0% {
-			-ms-transform-origin: center center;
-			-ms-transform: rotate(380deg);
-			opacity: 0;
-		}
-
-		100% {
-			-ms-transform-origin: center center;
-			-ms-transform: rotate(0);
-			opacity: 1;
-		}
-	}
-
-	@-o-keyframes spinRight {
-		0% {
-			-o-transform-origin: center center;
-			-o-transform: rotate(380deg);
-			opacity: 0;
-		}
-
-		100% {
-			-o-transform-origin: center center;
-			-o-transform: rotate(0);
-			opacity: 1;
-		}
-	}
-
-	@keyframes spinRight {
-		0% {
-			transform-origin: center center;
-			transform: rotate(380deg);
-			opacity: 0;
-		}
-
-		100% {
-			transform-origin: center center;
-			transform: rotate(0);
-			opacity: 1;
-		}
-	}
-
-	.animate.spinRight,
-	.trigger.spinRight {
-		-webkit-animation-name: spinRight;
-		-moz-animation-name: spinRight;
-		-ms-animation-name: spinRight;
-		-o-animation-name: spinRight;
-		animation-name: spinRight;
 	}
 
 
@@ -4120,7 +3929,6 @@
 		25%, 75% { opacity: 0; }
 	}
 
-	.animate.flash,
 	.trigger.flash,
 	.hover-flash:hover {
 		-webkit-animation-name: flash;
@@ -4159,7 +3967,6 @@
 		10%, 30%, 50%, 70%, 90% { opacity: 0; }
 	}
 
-	.animate.strobe,
 	.trigger.strobe,
 	.hover-strobe:hover {
 		-webkit-animation-name: strobe;
@@ -4170,47 +3977,89 @@
 	}
 
 
-/*	#Shake
+/*	#Shake Horizontally
 //	================================================== */
 
-	@-webkit-keyframes shake {
+	@-webkit-keyframes shakeH {
 		0%, 100% { -webkit-transform: translateX(0); }
 		10%, 30%, 50%, 70%, 90% { -webkit-transform: translateX(-10px); }
 		20%, 40%, 60%, 80% { -webkit-transform: translateX(10px); }
 	}
 
-	@-moz-keyframes shake {
+	@-moz-keyframes shakeH {
 		0%, 100% { -moz-transform: translateX(0); }
 		10%, 30%, 50%, 70%, 90% { -moz-transform: translateX(-10px); }
 		20%, 40%, 60%, 80% { -moz-transform: translateX(10px); }
 	}
 
-	@-ms-keyframes shake {
+	@-ms-keyframes shakeH {
 		0%, 100% { -ms-transform: translateX(0); }
 		10%, 30%, 50%, 70%, 90% { -ms-transform: translateX(-10px); }
 		20%, 40%, 60%, 80% { -ms-transform: translateX(10px); }
 	}
 
-	@-o-keyframes shake {
+	@-o-keyframes shakeH {
 		0%, 100% { -o-transform: translateX(0); }
 		10%, 30%, 50%, 70%, 90% { -o-transform: translateX(-10px); }
 		20%, 40%, 60%, 80% { -o-transform: translateX(10px); }
 	}
 
-	@keyframes shake {
+	@keyframes shakeH {
 		0%, 100% { transform: translateX(0); }
 		10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
 		20%, 40%, 60%, 80% { transform: translateX(10px); }
 	}
 
-	.animate.shake,
-	.trigger.shake,
-	.hover-shake:hover {
-		-webkit-animation-name: shake;
-		-moz-animation-name: shake;
-		-ms-animation-name: shake;
-		-o-animation-name: shake;
-		animation-name: shake;
+	.trigger.shakeH,
+	.hover-shakeH:hover {
+		-webkit-animation-name: shakeH;
+		-moz-animation-name: shakeH;
+		-ms-animation-name: shakeH;
+		-o-animation-name: shakeH;
+		animation-name: shakeH;
+	}
+
+
+/*	#Shake Vertically
+//	================================================== */
+
+	@-webkit-keyframes shakeV {
+		0%, 100% { -webkit-transform: translateY(0); }
+		10%, 30%, 50%, 70%, 90% { -webkit-transform: translateY(-10px); }
+		20%, 40%, 60%, 80% { -webkit-transform: translateY(10px); }
+	}
+
+	@-moz-keyframes shakeV {
+		0%, 100% { -moz-transform: translateY(0); }
+		10%, 30%, 50%, 70%, 90% { -moz-transform: translateY(-10px); }
+		20%, 40%, 60%, 80% { -moz-transform: translateY(10px); }
+	}
+
+	@-ms-keyframes shakeV {
+		0%, 100% { -ms-transform: translateY(0); }
+		10%, 30%, 50%, 70%, 90% { -ms-transform: translateY(-10px); }
+		20%, 40%, 60%, 80% { -ms-transform: translateY(10px); }
+	}
+
+	@-o-keyframes shakeV {
+		0%, 100% { -o-transform: translateY(0); }
+		10%, 30%, 50%, 70%, 90% { -o-transform: translateY(-10px); }
+		20%, 40%, 60%, 80% { -o-transform: translateY(10px); }
+	}
+
+	@keyframes shakeV {
+		0%, 100% { transform: translateY(0); }
+		10%, 30%, 50%, 70%, 90% { transform: translateY(-10px); }
+		20%, 40%, 60%, 80% { transform: translateY(10px); }
+	}
+
+	.trigger.shakeV,
+	.hover-shakeV:hover {
+		-webkit-animation-name: shakeV;
+		-moz-animation-name: shakeV;
+		-ms-animation-name: shakeV;
+		-o-animation-name: shakeV;
+		animation-name: shakeV;
 	}
 
 
@@ -4247,7 +4096,6 @@
 		60% { transform: translateY(-15px); }
 	}
 
-	.animate.bounce,
 	.trigger.bounce,
 	.hover-bounce:hover {
 		-webkit-animation-name: bounce;
@@ -4296,7 +4144,6 @@
 		40%, 60%, 80% { transform: scale(1.1) rotate(-3deg); }
 	}
 
-	.animate.tada,
 	.trigger.tada,
 	.hover-tada:hover {
 		-webkit-animation-name: tada;
@@ -4350,8 +4197,6 @@
 		100% { transform: rotate(0deg); }
 	}
 
-	.animate.wave,
-	.trigger.wave,
 	.hover-wave:hover {
 		-webkit-animation-name: wave;
 		-moz-animation-name: wave;
@@ -4361,86 +4206,165 @@
 	}
 
 
-/*	#Spin
+/*	#Spin Clockwise
 //	================================================== */
 
-	@-webkit-keyframes spin {
+	@-webkit-keyframes spinCW {
 		0% { -webkit-transform: rotate(0deg); }
 		100% { -webkit-transform: rotate(360deg); }
 	}
 
-	@-moz-keyframes spin {
+	@-moz-keyframes spinCW {
 		0% { -moz-transform: rotate(0deg); }
 		100% { -moz-transform: rotate(360deg); }
 	}
 
-	@-ms-keyframes spin {
+	@-ms-keyframes spinCW {
 		0% { -ms-transform: rotate(0deg); }
 		100% { -ms-transform: rotate(360deg); }
 	}
 
-	@-o-keyframes spin {
+	@-o-keyframes spinCW {
 		0% { -o-transform: rotate(0deg); }
 		100% { -o-transform: rotate(360deg); }
 	}
 
-	@keyframes spin {
+	@keyframes spinCW {
 		0% { transform: rotate(0deg); }
 		100% { transform: rotate(360deg); }
 	}
 
-	.animate.spin,
-	.trigger.spin,
-	.hover-spin:hover {
-		-webkit-animation-name: spin;
-		-moz-animation-name: spin;
-		-ms-animation-name: spin;
-		-o-animation-name: spin;
-		animation-name: spin;
+	.trigger.spinCW,
+	.hover-spinCW:hover {
+		-webkit-animation-name: spinCW;
+		-moz-animation-name: spinCW;
+		-ms-animation-name: spinCW;
+		-o-animation-name: spinCW;
+		animation-name: spinCW;
 	}
 
 
-/*	#Pull Back
+/*	#Spin Counter-Clockwise
 //	================================================== */
 
-	@-webkit-keyframes pullback {
+	@-webkit-keyframes spinCCW {
+		0% { -webkit-transform: rotate(0deg); }
+		100% { -webkit-transform: rotate(-360deg); }
+	}
+
+	@-moz-keyframes spinCCW {
+		0% { -moz-transform: rotate(0deg); }
+		100% { -moz-transform: rotate(-360deg); }
+	}
+
+	@-ms-keyframes spinCCW {
+		0% { -ms-transform: rotate(0deg); }
+		100% { -ms-transform: rotate(-360deg); }
+	}
+
+	@-o-keyframes spinCCW {
+		0% { -o-transform: rotate(0deg); }
+		100% { -o-transform: rotate(-360deg); }
+	}
+
+	@keyframes spinCCW {
+		0% { transform: rotate(0deg); }
+		100% { transform: rotate(-360deg); }
+	}
+
+	.trigger.spinCCW,
+	.hover-spinCCW:hover {
+		-webkit-animation-name: spinCCW;
+		-moz-animation-name: spinCCW;
+		-ms-animation-name: spinCCW;
+		-o-animation-name: spinCCW;
+		animation-name: spinCCW;
+	}
+
+
+/*	#Slingshot Clockwise
+//	================================================== */
+
+	@-webkit-keyframes slingshotCW {
 		0% { -webkit-transform: rotate(0deg); }
 		20%, 30% { -webkit-transform: rotate(-45deg); }
 		100% { -webkit-transform: rotate(360deg); }
 	}
 
-	@-moz-keyframes pullback {
+	@-moz-keyframes slingshotCW {
 		0% { -moz-transform: rotate(0deg); }
 		20%, 30% { -moz-transform: rotate(-45deg); }
 		100% { -moz-transform: rotate(360deg); }
 	}
 
-	@-ms-keyframes pullback {
+	@-ms-keyframes slingshotCW {
 		0% { -ms-transform: rotate(0deg); }
 		20%, 30% { -ms-transform: rotate(-45deg); }
 		100% { -ms-transform: rotate(360deg); }
 	}
 
-	@-o-keyframes pullback {
+	@-o-keyframes slingshotCW {
 		0% { -o-transform: rotate(0deg); }
 		20%, 30% { -o-transform: rotate(-45deg); }
 		100% { -o-transform: rotate(360deg); }
 	}
 
-	@keyframes pullback {
+	@keyframes slingshotCW {
 		0% { transform: rotate(0deg); }
 		20%, 30% { transform: rotate(-45deg); }
 		100% { transform: rotate(360deg); }
 	}
 
-	.animate.pullback,
-	.trigger.pullback,
-	.hover-pullback:hover {
-		-webkit-animation-name: pullback;
-		-moz-animation-name: pullback;
-		-ms-animation-name: pullback;
-		-o-animation-name: pullback;
-		animation-name: pullback;
+	.trigger.slingshotCW,
+	.hover-slingshotCW:hover {
+		-webkit-animation-name: slingshotCW;
+		-moz-animation-name: slingshotCW;
+		-ms-animation-name: slingshotCW;
+		-o-animation-name: slingshotCW;
+		animation-name: slingshotCW;
+	}
+
+
+/*	#Slingshot Counter-Clockwise
+//	================================================== */
+
+	@-webkit-keyframes slingshotCCW {
+		0% { -webkit-transform: rotate(0deg); }
+		20%, 30% { -webkit-transform: rotate(45deg); }
+		100% { -webkit-transform: rotate(-360deg); }
+	}
+
+	@-moz-keyframes slingshotCCW {
+		0% { -moz-transform: rotate(0deg); }
+		20%, 30% { -moz-transform: rotate(45deg); }
+		100% { -moz-transform: rotate(-360deg); }
+	}
+
+	@-ms-keyframes slingshotCCW {
+		0% { -ms-transform: rotate(0deg); }
+		20%, 30% { -ms-transform: rotate(45deg); }
+		100% { -ms-transform: rotate(-360deg); }
+	}
+
+	@-o-keyframes slingshotCCW {
+		0% { -o-transform: rotate(0deg); }
+		20%, 30% { -o-transform: rotate(45deg); }
+		100% { -o-transform: rotate(-360deg); }
+	}
+
+	@keyframes slingshotCCW {
+		0% { transform: rotate(0deg); }
+		20%, 30% { transform: rotate(45deg); }
+		100% { transform: rotate(-360deg); }
+	}
+
+	.trigger.slingshotCCW,
+	.hover-slingshotCCW:hover {
+		-webkit-animation-name: slingshotCCW;
+		-moz-animation-name: slingshotCCW;
+		-ms-animation-name: slingshotCCW;
+		-o-animation-name: slingshotCCW;
+		animation-name: slingshotCCW;
 	}
 
 
@@ -4497,7 +4421,6 @@
 		100% { transform: translateX(0px); }
 	}
 
-	.animate.wobble,
 	.trigger.wobble,
 	.hover-wobble:hover {
 		-webkit-animation-name: wobble;
@@ -4536,7 +4459,6 @@
 		50% { transform: scale(1.1); }
 	}
 
-	.animate.pulse,
 	.trigger.pulse,
 	.hover-pulse:hover {
 		-webkit-animation-name: pulse;
@@ -4575,7 +4497,6 @@
 		25%, 75% { transform: scale(1.1); }
 	}
 
-	.animate.pulsate,
 	.trigger.pulsate,
 	.hover-pulsate:hover {
 		-webkit-animation-name: pulsate;
@@ -4614,7 +4535,6 @@
 		40%, 70% { transform: scale(1.1); }
 	}
 
-	.animate.heartbeat,
 	.trigger.heartbeat,
 	.hover-heartbeat:hover {
 		-webkit-animation-name: heartbeat;
@@ -4673,7 +4593,6 @@
 		80% { transform: scale(1.1) rotate(-3deg); }
 	}
 
-	.animate.panic,
 	.trigger.panic,
 	.hover-panic:hover {
 		-webkit-animation-name: panic;
@@ -4681,266 +4600,4 @@
 		-ms-animation-name: panic;
 		-o-animation-name: panic;
 		animation-name: panic;
-	}
-
-
-/*	#Progress Bar
-//	================================================== */
-
-	.progress-bar-container {
-		-moz-box-sizing: content-box;
-		-webkit-box-sizing: content-box;
-		box-sizing: content-box;
-		width: 100%;
-		height: 15px;
-		margin: 0 0 20px 0;
-		border: 2px solid #222;
-		-webkit-border-radius: 20px;
-		-moz-border-radius: 20px;
-		border-radius: 20px;
-		background: #222;
-		overflow: hidden;
-	}
-
-	.progress-bar-container.bm-remove	{ margin-bottom: 0;    }
-	.progress-bar-container.bm-smaller	{ margin-bottom: 5px;  }
-	.progress-bar-container.bm-small	{ margin-bottom: 10px; }
-	.progress-bar-container.bm-medium	{ margin-bottom: 20px; }
-	.progress-bar-container.bm-large	{ margin-bottom: 30px; }
-	.progress-bar-container.bm-larger	{ margin-bottom: 40px; }
-
-	.progress-bar-container.color-turquoise		{ border-color: #1abc9c; background: #1abc9c; }
-	.progress-bar-container.color-green-sea		{ border-color: #16a085; background: #16a085; }
-	.progress-bar-container.color-emerald		{ border-color: #2ecc71; background: #2ecc71; }
-	.progress-bar-container.color-nephritis		{ border-color: #27ae60; background: #27ae60; }
-	.progress-bar-container.color-peter-river	{ border-color: #3498db; background: #3498db; }
-	.progress-bar-container.color-belize-hole	{ border-color: #2980b9; background: #2980b9; }
-	.progress-bar-container.color-amethyst		{ border-color: #9b59b6; background: #9b59b6; }
-	.progress-bar-container.color-wisteria		{ border-color: #8e44ad; background: #8e44ad; }
-	.progress-bar-container.color-wet-asphalt	{ border-color: #34495e; background: #34495e; }
-	.progress-bar-container.color-midnight-blue	{ border-color: #2c3e50; background: #2c3e50; }
-	.progress-bar-container.color-sun-flower	{ border-color: #f1c40f; background: #f1c40f; }
-	.progress-bar-container.color-orange		{ border-color: #f39c12; background: #f39c12; }
-	.progress-bar-container.color-carrot		{ border-color: #e67e22; background: #e67e22; }
-	.progress-bar-container.color-pumpkin		{ border-color: #d35400; background: #d35400; }
-	.progress-bar-container.color-alizarin		{ border-color: #e74c3c; background: #e74c3c; }
-	.progress-bar-container.color-pomegranate	{ border-color: #c0392b; background: #c0392b; }
-	.progress-bar-container.color-clouds		{ border-color: #ecf0f1; background: #ecf0f1; }
-	.progress-bar-container.color-silver		{ border-color: #bdc3c7; background: #bdc3c7; }
-	.progress-bar-container.color-concrete		{ border-color: #95a5a6; background: #95a5a6; }
-	.progress-bar-container.color-asbestos		{ border-color: #7f8c8d; background: #7f8c8d; }
-
-	.progress-bar {
-		-moz-box-sizing: content-box;
-		-webkit-box-sizing: content-box;
-		box-sizing: content-box;
-		width: 0%;
-		height: 15px;
-		-webkit-border-radius: 20px;
-		-moz-border-radius: 20px;
-		border-radius: 20px;
-		background: #444;
-	}
-
-	.progress-bar.bar-100	{ width: 100%; }
-	.progress-bar.bar-99	{ width: 99%;  }
-	.progress-bar.bar-98	{ width: 98%;  }
-	.progress-bar.bar-97	{ width: 97%;  }
-	.progress-bar.bar-96	{ width: 96%;  }
-	.progress-bar.bar-95	{ width: 95%;  }
-	.progress-bar.bar-94	{ width: 94%;  }
-	.progress-bar.bar-93	{ width: 93%;  }
-	.progress-bar.bar-92	{ width: 92%;  }
-	.progress-bar.bar-91	{ width: 91%;  }
-	.progress-bar.bar-90	{ width: 90%;  }
-	.progress-bar.bar-89	{ width: 89%;  }
-	.progress-bar.bar-88	{ width: 88%;  }
-	.progress-bar.bar-87	{ width: 87%;  }
-	.progress-bar.bar-86	{ width: 86%;  }
-	.progress-bar.bar-85	{ width: 85%;  }
-	.progress-bar.bar-84	{ width: 84%;  }
-	.progress-bar.bar-83	{ width: 83%;  }
-	.progress-bar.bar-82	{ width: 82%;  }
-	.progress-bar.bar-81	{ width: 81%;  }
-	.progress-bar.bar-80	{ width: 80%;  }
-	.progress-bar.bar-79	{ width: 79%;  }
-	.progress-bar.bar-78	{ width: 78%;  }
-	.progress-bar.bar-77	{ width: 77%;  }
-	.progress-bar.bar-76	{ width: 76%;  }
-	.progress-bar.bar-75	{ width: 75%;  }
-	.progress-bar.bar-74	{ width: 74%;  }
-	.progress-bar.bar-73	{ width: 73%;  }
-	.progress-bar.bar-72	{ width: 72%;  }
-	.progress-bar.bar-71	{ width: 71%;  }
-	.progress-bar.bar-70	{ width: 70%;  }
-	.progress-bar.bar-69	{ width: 69%;  }
-	.progress-bar.bar-68	{ width: 68%;  }
-	.progress-bar.bar-67	{ width: 67%;  }
-	.progress-bar.bar-66	{ width: 66%;  }
-	.progress-bar.bar-65	{ width: 65%;  }
-	.progress-bar.bar-64	{ width: 64%;  }
-	.progress-bar.bar-63	{ width: 63%;  }
-	.progress-bar.bar-62	{ width: 62%;  }
-	.progress-bar.bar-61	{ width: 61%;  }
-	.progress-bar.bar-60	{ width: 60%;  }
-	.progress-bar.bar-59	{ width: 59%;  }
-	.progress-bar.bar-58	{ width: 58%;  }
-	.progress-bar.bar-57	{ width: 57%;  }
-	.progress-bar.bar-56	{ width: 56%;  }
-	.progress-bar.bar-55	{ width: 55%;  }
-	.progress-bar.bar-54	{ width: 54%;  }
-	.progress-bar.bar-53	{ width: 53%;  }
-	.progress-bar.bar-52	{ width: 52%;  }
-	.progress-bar.bar-51	{ width: 51%;  }
-	.progress-bar.bar-50	{ width: 50%;  }
-	.progress-bar.bar-49	{ width: 49%;  }
-	.progress-bar.bar-48	{ width: 48%;  }
-	.progress-bar.bar-47	{ width: 47%;  }
-	.progress-bar.bar-46	{ width: 46%;  }
-	.progress-bar.bar-45	{ width: 45%;  }
-	.progress-bar.bar-44	{ width: 44%;  }
-	.progress-bar.bar-43	{ width: 43%;  }
-	.progress-bar.bar-42	{ width: 42%;  }
-	.progress-bar.bar-41	{ width: 41%;  }
-	.progress-bar.bar-40	{ width: 40%;  }
-	.progress-bar.bar-39	{ width: 39%;  }
-	.progress-bar.bar-38	{ width: 38%;  }
-	.progress-bar.bar-37	{ width: 37%;  }
-	.progress-bar.bar-36	{ width: 36%;  }
-	.progress-bar.bar-35	{ width: 35%;  }
-	.progress-bar.bar-34	{ width: 34%;  }
-	.progress-bar.bar-33	{ width: 33%;  }
-	.progress-bar.bar-32	{ width: 32%;  }
-	.progress-bar.bar-31	{ width: 31%;  }
-	.progress-bar.bar-30	{ width: 30%;  }
-	.progress-bar.bar-29	{ width: 29%;  }
-	.progress-bar.bar-28	{ width: 28%;  }
-	.progress-bar.bar-27	{ width: 27%;  }
-	.progress-bar.bar-26	{ width: 26%;  }
-	.progress-bar.bar-25	{ width: 25%;  }
-	.progress-bar.bar-24	{ width: 24%;  }
-	.progress-bar.bar-23	{ width: 23%;  }
-	.progress-bar.bar-22	{ width: 22%;  }
-	.progress-bar.bar-21	{ width: 21%;  }
-	.progress-bar.bar-20	{ width: 20%;  }
-	.progress-bar.bar-19	{ width: 19%;  }
-	.progress-bar.bar-18	{ width: 18%;  }
-	.progress-bar.bar-17	{ width: 17%;  }
-	.progress-bar.bar-16	{ width: 16%;  }
-	.progress-bar.bar-15	{ width: 15%;  }
-	.progress-bar.bar-14	{ width: 14%;  }
-	.progress-bar.bar-13	{ width: 13%;  }
-	.progress-bar.bar-12	{ width: 12%;  }
-	.progress-bar.bar-11	{ width: 11%;  }
-	.progress-bar.bar-10	{ width: 10%;  }
-	.progress-bar.bar-9		{ width: 9%;   }
-	.progress-bar.bar-8		{ width: 8%;   }
-	.progress-bar.bar-7		{ width: 7%;   }
-	.progress-bar.bar-6		{ width: 6%;   }
-	.progress-bar.bar-5		{ width: 5%;   }
-	.progress-bar.bar-4		{ width: 4%;   }
-	.progress-bar.bar-3		{ width: 3%;   }
-	.progress-bar.bar-2		{ width: 2%;   }
-	.progress-bar.bar-1		{ width: 1%;   }
-	.progress-bar.bar-0		{ width: 0%;   }
-
-	.progress-bar.color-turquoise		{ background: #1abc9c; }
-	.progress-bar.color-green-sea		{ background: #16a085; }
-
-	.progress-bar.color-emerald			{ background: #2ecc71; }
-	.progress-bar.color-nephritis		{ background: #27ae60; }
-
-	.progress-bar.color-peter-river		{ background: #3498db; }
-	.progress-bar.color-belize-hole		{ background: #2980b9; }
-
-	.progress-bar.color-amethyst		{ background: #9b59b6; }
-	.progress-bar.color-wisteria		{ background: #8e44ad; }
-
-	.progress-bar.color-wet-asphalt		{ background: #34495e; }
-	.progress-bar.color-midnight-blue	{ background: #2c3e50; }
-
-	.progress-bar.color-sun-flower		{ background: #f1c40f; }
-	.progress-bar.color-orange			{ background: #f39c12; }
-
-	.progress-bar.color-carrot			{ background: #e67e22; }
-	.progress-bar.color-pumpkin			{ background: #d35400; }
-
-	.progress-bar.color-alizarin		{ background: #e74c3c; }
-	.progress-bar.color-pomegranate		{ background: #c0392b; }
-
-	.progress-bar.color-clouds			{ background: #ecf0f1; }
-	.progress-bar.color-silver			{ background: #bdc3c7; }
-
-	.progress-bar.color-concrete		{ background: #95a5a6; }
-	.progress-bar.color-asbestos		{ background: #7f8c8d; }
-
-	@-webkit-keyframes progressStripeLTR {
-		to { background-position: 30px 0; }
-	}
-
-	@-moz-keyframes progressStripeLTR {
-		to { background-position: 30px 0; }
-	}
-
-	@-ms-keyframes progressStripeLTR {
-		to { background-position: 30px 0; }
-	}
-
-	@-o-keyframes progressStripeLTR {
-		to { background-position: 30px 0; }
-	}
-
-	@keyframes progressStripeLTR {
-		to { background-position: 30px 0; }
-	}
-
-	@-webkit-keyframes progressStripeRTL {
-		to { background-position: -30px 0; }
-	}
-
-	@-moz-keyframes progressStripeRTL {
-		to { background-position: -30px 0; }
-	}
-
-	@-ms-keyframes progressStripeRTL {
-		to { background-position: -30px 0; }
-	}
-
-	@-o-keyframes progressStripeRTL {
-		to { background-position: -30px 0; }
-	}
-
-	@keyframes progressStripeRTL {
-		to { background-position: -30px 0; }
-	}
-
-	.progress-bar-candy {
-		width: 100%;
-		height: 15px;
-		-webkit-border-radius: 20px;
-		-moz-border-radius: 20px;
-		border-radius: 20px;
-		background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
-		background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
-		background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
-		background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
-		background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
-		background-repeat: repeat-x;
-		background-size: 30px 30px;
-	}
-
-	.progress-bar-candy.candy-ltr {
-		-webkit-animation: progressStripeLTR .6s linear infinite;
-		-moz-animation: progressStripeLTR .6s linear infinite;
-		-ms-animation: progressStripeLTR .6s linear infinite;
-		-o-animation: progressStripeLTR .6s linear infinite;
-		animation: progressStripeLTR .6s linear infinite;
-	}
-
-	.progress-bar-candy.candy-rtl {
-		-webkit-animation: progressStripeRTL .6s linear infinite;
-		-moz-animation: progressStripeRTL .6s linear infinite;
-		-ms-animation: progressStripeRTL .6s linear infinite;
-		-o-animation: progressStripeRTL .6s linear infinite;
-		animation: progressStripeRTL .6s linear infinite;
 	}
