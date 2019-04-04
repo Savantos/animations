@@ -3,8 +3,6 @@ Animations v1.4
 
 A versatile CSS3 animation pack with various usages. Trigger CSS3 animations as elements enter the viewport, as you hover with a mouse or by binding them via JavaScript functions/event listeners.
 
-**Demo:** http://www.cloud-eight.com/github/animations/
-
 
 Usage
 =====
